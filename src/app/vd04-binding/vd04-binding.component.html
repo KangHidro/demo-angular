@@ -1,0 +1,36 @@
+Data biding:
+<br>
+<app-my-comp [firstName]="'Angular'"></app-my-comp>
+<br>
+<app-my-comp [firstName]="recievedName"></app-my-comp>
+<br>
+<app-my-comp [firstName]="getName()"></app-my-comp>
+<br>
+
+<hr>
+
+Property Binding:<br>
+Icon setting: <img [src]="imgSrc">
+<br>
+<app-my-comp [attr.last-name]="lastName"></app-my-comp>
+<br>
+
+<hr>
+
+Style Binding & Class Binding:<br>
+<span [ngStyle]="{ color: 'blue' }">Hello world!</span>
+<br>
+<span [ngClass]="'text-red'">Hello world, again!</span>
+<br>
+
+<hr>
+
+Event binding:<br>
+<button type="button" (click)="handleClick($event)">Alert</button>
+<br>
+
+<hr>
+
+Two-way Binding:<br>
+<input type="number" [(ngModel)]="age"><br>
+You enter age = {{ age }}

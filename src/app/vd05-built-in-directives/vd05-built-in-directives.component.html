@@ -1,0 +1,47 @@
+ngIf example:<br>
+<span *ngIf="canShow; else hideTpl">I'm here!</span><br>
+
+<button type="button" (click)="canShow=!canShow">Toggle show/hide</button>
+
+<ng-template #hideTpl>
+  <span>---------</span>
+</ng-template>
+
+
+<hr>
+
+
+ngFor example:<br>
+List page:
+<ul>
+  <li *ngFor="let page of listPage;
+              let i = index;
+              let isFirst = first;
+              let isLast = last">
+    {{ i + 1}}. {{ page }}
+    {{ isFirst ? '(Start)' : '' }}
+    {{ isLast ? '(End)' : '' }}
+  </li>
+</ul>
+
+
+<hr>
+
+
+ngSwitchCase example:<br>
+
+<input type="string" [(ngModel)]="inputValue"><br>
+<span [ngSwitch]="inputValue">
+  <span *ngSwitchCase="'a'">
+    Case A
+  </span>
+  <span *ngSwitchCase="'b'">
+    Case B
+  </span>
+  <span *ngSwitchCase="'c'">
+    Case C
+  </span>
+  <span *ngSwitchDefault>
+    {{ inputValue ? 'No case ' + inputValue : '' }}
+  </span>
+</span>
