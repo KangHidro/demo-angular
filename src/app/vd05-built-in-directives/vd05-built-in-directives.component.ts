@@ -13,4 +13,6 @@ export class Vd05BuiltInDirectivesComponent {
 
   inputValue!: string;
 
+  myContext = { $implicit: 'World', locakVie: 'Bạn' };
+
 }

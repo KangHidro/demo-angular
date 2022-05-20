@@ -45,3 +45,20 @@ ngSwitchCase example:<br>
     {{ inputValue ? 'No case ' + inputValue : '' }}
   </span>
 </span>
+<br>
+
+
+<hr>
+
+
+ngTemplateOutlet:<br>
+<ng-container *ngTemplateOutlet="greet"></ng-container>
+<br>
+<ng-container *ngTemplateOutlet="eng; context: myContext"></ng-container>
+<br>
+<ng-container *ngTemplateOutlet="vie; context: myContext"></ng-container>
+<br>
+
+<ng-template #greet>Hello!</ng-template>
+<ng-template #eng let-name>Hello {{name}}!!</ng-template>
+<ng-template #vie let-person="localVie">Chào {{person}}!!!</ng-template>
