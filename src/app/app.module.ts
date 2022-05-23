@@ -20,6 +20,7 @@ import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { ItemOutputComponent } from './item-output/item-output.component';
 import { Vd08InteractionCompComponent } from './vd08-interaction-comp/vd08-interaction-comp.component';
 import { InputOutputComponent } from './input-output/input-output.component';
+import { Vd09TemplateRefVarComponent } from './vd09-template-ref-var/vd09-template-ref-var.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { InputOutputComponent } from './input-output/input-output.component';
     ItemOutputComponent,
     Vd08InteractionCompComponent,
     InputOutputComponent,
+    Vd09TemplateRefVarComponent,
   ],
   imports: [
     BrowserModule,

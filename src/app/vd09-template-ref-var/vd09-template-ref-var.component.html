@@ -1,0 +1,24 @@
+<input #userName>
+<br>
+<button type="button" (click)="saveName(userName.value)">Save name</button>
+
+<hr>
+
+View console log.
+<app-my-comp #myComp hidden></app-my-comp>
+Component instance: <button (click)="log('Component instance', myComp)">Log value (open console)</button>
+
+<br><br>
+
+<input hidden #htmlTag>
+HTML tag: <button (click)="log('HTML tag', htmlTag)">Log value (open console)</button>
+
+<br><br>
+
+<ng-template #ngTemplate></ng-template>
+&lt;ng-template&gt;: <button (click)="log('ng-template', ngTemplate)">Log value (open console)</button>
+
+<br><br>
+
+<form #heroForm="ngForm"></form>
+Directive Ref: <button (click)="log('directiveRef', heroForm)">Log value (open console)</button>
