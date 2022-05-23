@@ -1,1 +1,9 @@
-<p>vd08-interaction-comp works!</p>
+Input data: <input type="text" [(ngModel)]="inputData">
+<hr>
+<app-input-output [data]="inputData" (returnData)="saveData($event)">
+</app-input-output>
+<hr>
+Saved list:<br>
+<ul>
+  <li *ngFor="let item of listData">{{item}}</li>
+</ul>

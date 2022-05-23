@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './vd08-interaction-comp.component.html',
   styleUrls: ['./vd08-interaction-comp.component.scss']
 })
-export class Vd08InteractionCompComponent implements OnInit {
+export class Vd08InteractionCompComponent {
 
-  constructor() { }
+  inputData = '';
+  listData: string[] = [];
 
-  ngOnInit(): void {
+  saveData(data: string) {
+    if (data) {
+      this.listData.push(data);
+      this.inputData = '';
+    }
   }
 
 }
