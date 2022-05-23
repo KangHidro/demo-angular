@@ -7,6 +7,7 @@ import { Vd06CustomDirectivesComponent } from './vd06-custom-directives/vd06-cus
 import { Vd07InputOutputComponent } from './vd07-input-output/vd07-input-output.component';
 import { Vd08InteractionCompComponent } from './vd08-interaction-comp/vd08-interaction-comp.component';
 import { Vd09TemplateRefVarComponent } from './vd09-template-ref-var/vd09-template-ref-var.component';
+import { Vd10ViewchildViewchildrenComponent } from './vd10-viewchild-viewchildren/vd10-viewchild-viewchildren.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'vd02', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'vd07', component: Vd07InputOutputComponent },
   { path: 'vd08', component: Vd08InteractionCompComponent },
   { path: 'vd09', component: Vd09TemplateRefVarComponent },
+  { path: 'vd10', component: Vd10ViewchildViewchildrenComponent },
 ];
 
 @NgModule({
