@@ -15,6 +15,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Vd05BuiltInDirectivesComponent } from './vd05-built-in-directives/vd05-built-in-directives.component';
 import { Vd06CustomDirectivesComponent } from './vd06-custom-directives/vd06-custom-directives.component';
 import { NumberSeparatorDirective } from './vd06-custom-directives/number-separator.directive';
+import { Vd07InputOutputComponent } from './vd07-input-output/vd07-input-output.component';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
+import { ItemOutputComponent } from './item-output/item-output.component';
+import { Vd08InteractionCompComponent } from './vd08-interaction-comp/vd08-interaction-comp.component';
 
 
 @NgModule({
@@ -26,6 +30,10 @@ import { NumberSeparatorDirective } from './vd06-custom-directives/number-separa
     Vd05BuiltInDirectivesComponent,
     Vd06CustomDirectivesComponent,
     NumberSeparatorDirective,
+    Vd07InputOutputComponent,
+    ItemDetailComponent,
+    ItemOutputComponent,
+    Vd08InteractionCompComponent,
   ],
   imports: [
     BrowserModule,

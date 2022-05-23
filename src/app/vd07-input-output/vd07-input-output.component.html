@@ -1,0 +1,12 @@
+@Input<br>
+<app-item-detail [item]="currentItem"></app-item-detail>
+<br>
+
+
+<hr>
+
+
+@Output:<br>
+<app-item-output (newItemEvent)="addItem($event)"></app-item-output>
+<br><br>
+List items: {{ items | json }}
