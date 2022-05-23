@@ -1,5 +1,6 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,10 @@ import { Vd10ViewchildViewchildrenComponent } from './vd10-viewchild-viewchildre
 import { Vd11ContentProjectionComponent } from './vd11-content-projection/vd11-content-projection.component';
 import { ShowContentComponent } from './show-content/show-content.component';
 import { ShowContentMultiComponent } from './show-content-multi/show-content-multi.component';
+import { Vd12BuiltInPipesComponent } from './vd12-built-in-pipes/vd12-built-in-pipes.component';
+import { Vd13CustomPipesComponent } from './vd13-custom-pipes/vd13-custom-pipes.component';
+import { CurrencyPipe } from './vd13-custom-pipes/currency.pipe';
+import { Vd15HttpClientComponent } from './vd15-http-client/vd15-http-client.component';
 
 
 @NgModule({
@@ -46,12 +51,17 @@ import { ShowContentMultiComponent } from './show-content-multi/show-content-mul
     Vd11ContentProjectionComponent,
     ShowContentComponent,
     ShowContentMultiComponent,
+    Vd12BuiltInPipesComponent,
+    Vd13CustomPipesComponent,
+    CurrencyPipe,
+    Vd15HttpClientComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'vi-VN' }],
   bootstrap: [AppComponent]

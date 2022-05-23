@@ -9,6 +9,9 @@ import { Vd08InteractionCompComponent } from './vd08-interaction-comp/vd08-inter
 import { Vd09TemplateRefVarComponent } from './vd09-template-ref-var/vd09-template-ref-var.component';
 import { Vd10ViewchildViewchildrenComponent } from './vd10-viewchild-viewchildren/vd10-viewchild-viewchildren.component';
 import { Vd11ContentProjectionComponent } from './vd11-content-projection/vd11-content-projection.component';
+import { Vd12BuiltInPipesComponent } from './vd12-built-in-pipes/vd12-built-in-pipes.component';
+import { Vd13CustomPipesComponent } from './vd13-custom-pipes/vd13-custom-pipes.component';
+import { Vd15HttpClientComponent } from './vd15-http-client/vd15-http-client.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'vd02', pathMatch: 'full' },
@@ -21,6 +24,9 @@ const routes: Routes = [
   { path: 'vd09', component: Vd09TemplateRefVarComponent },
   { path: 'vd10', component: Vd10ViewchildViewchildrenComponent },
   { path: 'vd11', component: Vd11ContentProjectionComponent },
+  { path: 'vd12', component: Vd12BuiltInPipesComponent },
+  { path: 'vd13', component: Vd13CustomPipesComponent },
+  { path: 'vd15', component: Vd15HttpClientComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,27 @@
+<button type="button" (click)="getUser()">Get/Refresh user list</button><br>
+<ul>
+  <li *ngFor="let u of listUser">{{u.name}} ({{u.age}}) -
+    <button type="button" (click)="selectedUser = u">Update</button>
+    <button type="button" (click)="deleteUser(u._id)">Delete</button>
+  </li>
+</ul>
+
+<ng-container *ngIf="selectedUser._id; else addUserTpl">
+  <hr>
+  Name: <input type="text" #name [value]="selectedUser.name"><br>
+  Age: <input type="number" #age [value]="selectedUser.age"><br>
+  <button type="button" (click)="updateUser(selectedUser._id, name.value, +age.value)">Update user</button>
+</ng-container>
+
+<ng-template #addUserTpl>
+  <hr>
+  Name: <input type="text" #name><br>
+  Age: <input type="number" #age><br>
+  <button type="button" (click)="createUser(name.value, +age.value)">Add user</button>
+</ng-template>
+
+<br><br><br><br><br><br>
+<hr>
+
+Server return string instead JSON:<br>
+<button type="button" (click)="getObserve()">Read data</button>
