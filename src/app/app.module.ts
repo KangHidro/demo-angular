@@ -22,6 +22,9 @@ import { Vd08InteractionCompComponent } from './vd08-interaction-comp/vd08-inter
 import { InputOutputComponent } from './input-output/input-output.component';
 import { Vd09TemplateRefVarComponent } from './vd09-template-ref-var/vd09-template-ref-var.component';
 import { Vd10ViewchildViewchildrenComponent } from './vd10-viewchild-viewchildren/vd10-viewchild-viewchildren.component';
+import { Vd11ContentProjectionComponent } from './vd11-content-projection/vd11-content-projection.component';
+import { ShowContentComponent } from './show-content/show-content.component';
+import { ShowContentMultiComponent } from './show-content-multi/show-content-multi.component';
 
 
 @NgModule({
@@ -40,6 +43,9 @@ import { Vd10ViewchildViewchildrenComponent } from './vd10-viewchild-viewchildre
     InputOutputComponent,
     Vd09TemplateRefVarComponent,
     Vd10ViewchildViewchildrenComponent,
+    Vd11ContentProjectionComponent,
+    ShowContentComponent,
+    ShowContentMultiComponent,
   ],
   imports: [
     BrowserModule,
