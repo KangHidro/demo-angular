@@ -1,3 +1,4 @@
+Form Validator example:<br>
 <form [formGroup]="formBuild">
   Enter your name: <input type="text" formControlName="yourName"><br>
   Enter age: <input type="number" formControlName="age"><br>
@@ -16,3 +17,22 @@ Field "yourName" error: {{ formBuild.get('yourName')?.errors | json }}<br>
 Field "age" error: {{ formBuild.get('age')?.errors | json }}<br>
 Field "point" error: {{ formBuild.get('point')?.errors | json }}<br>
 Field "email" error: {{ formBuild.get('email')?.errors | json }}<br>
+
+<br><br><br>
+<hr>
+<br><br><br>
+Touched & hasError example:<br>
+<form [formGroup]="formBuild">
+  Enter point: <input type="number" formControlName="point"><br>
+  <ng-container *ngIf="formBuild.get('point')?.touched">
+    <span *ngIf="formBuild.get('point')?.hasError('required')" style="color: red;">
+      Field required!
+    </span>
+    <span *ngIf="formBuild.get('point')?.hasError('min')" style="color: red;">
+      The point must be &gt;= 0
+    </span>
+    <span *ngIf="formBuild.get('point')?.hasError('max')" style="color: red;">
+      The point must be &lt;= 10
+    </span>
+  </ng-container>
+</form>

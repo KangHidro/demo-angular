@@ -9,3 +9,4 @@ export const customEmailValidator: ValidationErrors = (control: AbstractControl)
     return Validators.email(control);
   }
 };
+
