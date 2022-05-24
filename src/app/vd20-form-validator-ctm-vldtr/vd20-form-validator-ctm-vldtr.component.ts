@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { customEmailValidator } from './email.validator';
 
 @Component({
   selector: 'app-vd20-form-validator-ctm-vldtr',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Vd20FormValidatorCtmVldtrComponent implements OnInit {
 
-  constructor() { }
+  formBuild!: FormGroup;
+
+  constructor(private builder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.createFormBuild();
+  }
+
+  createFormBuild() {
+    this.formBuild = this.builder.group({
+      yourName: ['', [Validators.required]],
+      age: ['', [Validators.min(10)]],
+      point: ['', [Validators.min(0), Validators.max(10), Validators.required]],
+      email: ['', [customEmailValidator]],
+    });
+  }
+
+  makeFieldRequired() {
+    this.formBuild.get('yourName')?.setValidators([Validators.required]);
+    this.formBuild.get('yourName')?.updateValueAndValidity();
+  }
+
+  makeFieldOptional() {
+    this.formBuild.get('yourName')?.setValidators(null);
+    this.formBuild.get('yourName')?.updateValueAndValidity();
   }
 
 }
