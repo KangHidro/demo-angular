@@ -1,0 +1,24 @@
+Legacy ways:<br>
+<form [formGroup]="formLegacy">
+  Enter your name: <input type="text" formControlName="yourName">
+</form>
+<br>
+{{ formLegacy.value | json }}
+
+
+<br><br>
+<hr>
+
+
+Builder ways:<br>
+<form [formGroup]="formBuild">
+  Enter your name: <input type="text" formControlName="yourName">
+</form>
+<br>
+<button type="button" (click)="patchValue()">Call patchValue</button>
+<button type="button" (click)="setValue()">Call setValue</button>
+<button type="button" (click)="resetForm()">Call resetForm</button>
+<button type="button" (click)="updateValueAndVidity()">Call updateValueAndVidity</button>
+<br><i>Call updateValueAndVidity should use when change validator of form control</i>
+<br><br>
+{{ formBuild.value | json }}

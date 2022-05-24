@@ -33,6 +33,9 @@ import { Vd15HttpClientComponent } from './vd15-http-client/vd15-http-client.com
 import { Vd16HandleHttpErrorComponent } from './vd16-handle-http-error/vd16-handle-http-error.component';
 import { Vd17InterceptorComponent } from './vd17-interceptor/vd17-interceptor.component';
 import { AuthInterceptor } from './vd16-handle-http-error/auth.interceptor';
+import { Vd18FormGroupComponent } from './vd18-form-group/vd18-form-group.component';
+import { Vd19FormArrayComponent } from './vd19-form-array/vd19-form-array.component';
+import { Vd20FormValidatorCtmVldtrComponent } from './vd20-form-validator-ctm-vldtr/vd20-form-validator-ctm-vldtr.component';
 
 
 @NgModule({
@@ -60,6 +63,9 @@ import { AuthInterceptor } from './vd16-handle-http-error/auth.interceptor';
     Vd15HttpClientComponent,
     Vd16HandleHttpErrorComponent,
     Vd17InterceptorComponent,
+    Vd18FormGroupComponent,
+    Vd19FormArrayComponent,
+    Vd20FormValidatorCtmVldtrComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,9 @@ import { Vd13CustomPipesComponent } from './vd13-custom-pipes/vd13-custom-pipes.
 import { Vd15HttpClientComponent } from './vd15-http-client/vd15-http-client.component';
 import { Vd16HandleHttpErrorComponent } from './vd16-handle-http-error/vd16-handle-http-error.component';
 import { Vd17InterceptorComponent } from './vd17-interceptor/vd17-interceptor.component';
+import { Vd18FormGroupComponent } from './vd18-form-group/vd18-form-group.component';
+import { Vd19FormArrayComponent } from './vd19-form-array/vd19-form-array.component';
+import { Vd20FormValidatorCtmVldtrComponent } from './vd20-form-validator-ctm-vldtr/vd20-form-validator-ctm-vldtr.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'vd02', pathMatch: 'full' },
@@ -31,6 +34,9 @@ const routes: Routes = [
   { path: 'vd15', component: Vd15HttpClientComponent },
   { path: 'vd16', component: Vd16HandleHttpErrorComponent },
   { path: 'vd17', component: Vd17InterceptorComponent },
+  { path: 'vd18', component: Vd18FormGroupComponent },
+  { path: 'vd19', component: Vd19FormArrayComponent },
+  { path: 'vd20', component: Vd20FormValidatorCtmVldtrComponent },
 ];
 
 @NgModule({
