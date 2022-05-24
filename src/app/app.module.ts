@@ -1,6 +1,6 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +31,8 @@ import { Vd13CustomPipesComponent } from './vd13-custom-pipes/vd13-custom-pipes.
 import { CurrencyPipe } from './vd13-custom-pipes/currency.pipe';
 import { Vd15HttpClientComponent } from './vd15-http-client/vd15-http-client.component';
 import { Vd16HandleHttpErrorComponent } from './vd16-handle-http-error/vd16-handle-http-error.component';
+import { Vd17InterceptorComponent } from './vd17-interceptor/vd17-interceptor.component';
+import { AuthInterceptor } from './vd16-handle-http-error/auth.interceptor';
 
 
 @NgModule({
@@ -57,6 +59,7 @@ import { Vd16HandleHttpErrorComponent } from './vd16-handle-http-error/vd16-hand
     CurrencyPipe,
     Vd15HttpClientComponent,
     Vd16HandleHttpErrorComponent,
+    Vd17InterceptorComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,16 @@ import { Vd16HandleHttpErrorComponent } from './vd16-handle-http-error/vd16-hand
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'vi-VN' }],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'vi-VN' },
+    // START Interceptor Provider:
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: AuthInterceptor,
+    //   multi: true
+    // },
+    // END Interceptor Provider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
