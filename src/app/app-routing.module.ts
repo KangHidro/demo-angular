@@ -12,6 +12,7 @@ import { Vd11ContentProjectionComponent } from './vd11-content-projection/vd11-c
 import { Vd12BuiltInPipesComponent } from './vd12-built-in-pipes/vd12-built-in-pipes.component';
 import { Vd13CustomPipesComponent } from './vd13-custom-pipes/vd13-custom-pipes.component';
 import { Vd15HttpClientComponent } from './vd15-http-client/vd15-http-client.component';
+import { Vd16HandleHttpErrorComponent } from './vd16-handle-http-error/vd16-handle-http-error.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'vd02', pathMatch: 'full' },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'vd12', component: Vd12BuiltInPipesComponent },
   { path: 'vd13', component: Vd13CustomPipesComponent },
   { path: 'vd15', component: Vd15HttpClientComponent },
+  { path: 'vd16', component: Vd16HandleHttpErrorComponent },
 ];
 
 @NgModule({

@@ -30,6 +30,7 @@ import { Vd12BuiltInPipesComponent } from './vd12-built-in-pipes/vd12-built-in-p
 import { Vd13CustomPipesComponent } from './vd13-custom-pipes/vd13-custom-pipes.component';
 import { CurrencyPipe } from './vd13-custom-pipes/currency.pipe';
 import { Vd15HttpClientComponent } from './vd15-http-client/vd15-http-client.component';
+import { Vd16HandleHttpErrorComponent } from './vd16-handle-http-error/vd16-handle-http-error.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { Vd15HttpClientComponent } from './vd15-http-client/vd15-http-client.com
     Vd13CustomPipesComponent,
     CurrencyPipe,
     Vd15HttpClientComponent,
+    Vd16HandleHttpErrorComponent,
   ],
   imports: [
     BrowserModule,
