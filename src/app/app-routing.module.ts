@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Page404Component } from './page404/page404.component';
+import { ReadRoutingParamsComponent } from './read-routing-params/read-routing-params.component';
+import { ReadRoutingQueryParamsComponent } from './read-routing-query-params/read-routing-query-params.component';
 import { Vd02StringInterpolationComponent } from './vd02-string-interpolation/vd02-string-interpolation.component';
 import { Vd04BindingComponent } from './vd04-binding/vd04-binding.component';
 import { Vd05BuiltInDirectivesComponent } from './vd05-built-in-directives/vd05-built-in-directives.component';
@@ -17,6 +20,7 @@ import { Vd17InterceptorComponent } from './vd17-interceptor/vd17-interceptor.co
 import { Vd18FormGroupComponent } from './vd18-form-group/vd18-form-group.component';
 import { Vd19FormArrayComponent } from './vd19-form-array/vd19-form-array.component';
 import { Vd20FormValidatorCtmVldtrComponent } from './vd20-form-validator-ctm-vldtr/vd20-form-validator-ctm-vldtr.component';
+import { Vd21RoutingComponent } from './vd21-routing/vd21-routing.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'vd02', pathMatch: 'full' },
@@ -37,6 +41,12 @@ const routes: Routes = [
   { path: 'vd18', component: Vd18FormGroupComponent },
   { path: 'vd19', component: Vd19FormArrayComponent },
   { path: 'vd20', component: Vd20FormValidatorCtmVldtrComponent },
+  { path: 'vd21', component: Vd21RoutingComponent },
+  { path: 'read-params/:id', component: ReadRoutingParamsComponent },
+  { path: 'read-query-params', component: ReadRoutingQueryParamsComponent },
+
+  // { path: '**', redirectTo: 'vd02', pathMatch: 'full' },
+  { path: '**', component: Page404Component },
 ];
 
 @NgModule({

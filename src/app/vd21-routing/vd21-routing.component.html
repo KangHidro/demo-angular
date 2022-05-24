@@ -1,0 +1,37 @@
+Example list:<br>
+<ul>
+  <li [routerLink]="['/vd20']">
+    routerLink by array of 1 item (template)
+  </li>
+  <li [routerLink]="['/', 'vd20']">
+    routerLink by array of segments (template)
+  </li>
+  <li routerLink="/vd20">
+    routerLink by 1 string (template)
+  </li>
+  <li (click)="routerItem()">
+    routerLink by array of 1 item (function)
+  </li>
+  <li (click)="routerSegments()">
+    routerLink by array of segments (function)
+  </li>
+  <li (click)="routerUrl()">
+    routerLink by 1 string (function)
+  </li>
+</ul>
+
+<br><br><br>
+<hr>
+
+Routing with params:<br>
+<span class="pointer" [routerLink]="['/read-params', '123456']">
+  Click to redirect to /read-params/123456
+</span>
+
+<br><br><br>
+<hr>
+
+Routing with query params:<br>
+<span class="pointer" [routerLink]="['/read-query-params']" [queryParams]="{ name: 'Angular' }">
+  Click to redirect to /read-query-params?name=Angular
+</span>

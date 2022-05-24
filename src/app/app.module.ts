@@ -36,6 +36,10 @@ import { AuthInterceptor } from './vd16-handle-http-error/auth.interceptor';
 import { Vd18FormGroupComponent } from './vd18-form-group/vd18-form-group.component';
 import { Vd19FormArrayComponent } from './vd19-form-array/vd19-form-array.component';
 import { Vd20FormValidatorCtmVldtrComponent } from './vd20-form-validator-ctm-vldtr/vd20-form-validator-ctm-vldtr.component';
+import { Vd21RoutingComponent } from './vd21-routing/vd21-routing.component';
+import { ReadRoutingParamsComponent } from './read-routing-params/read-routing-params.component';
+import { Page404Component } from './page404/page404.component';
+import { ReadRoutingQueryParamsComponent } from './read-routing-query-params/read-routing-query-params.component';
 
 
 @NgModule({
@@ -66,6 +70,10 @@ import { Vd20FormValidatorCtmVldtrComponent } from './vd20-form-validator-ctm-vl
     Vd18FormGroupComponent,
     Vd19FormArrayComponent,
     Vd20FormValidatorCtmVldtrComponent,
+    Vd21RoutingComponent,
+    ReadRoutingParamsComponent,
+    Page404Component,
+    ReadRoutingQueryParamsComponent,
   ],
   imports: [
     BrowserModule,
