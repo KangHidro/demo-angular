@@ -40,6 +40,8 @@ import { Vd21RoutingComponent } from './vd21-routing/vd21-routing.component';
 import { ReadRoutingParamsComponent } from './read-routing-params/read-routing-params.component';
 import { Page404Component } from './page404/page404.component';
 import { ReadRoutingQueryParamsComponent } from './read-routing-query-params/read-routing-query-params.component';
+import { Vd23DomSanitizerComponent } from './vd23-dom-sanitizer/vd23-dom-sanitizer.component';
+import { SafeHtmlPipe } from './vd23-dom-sanitizer/safe-html.pipe';
 
 
 @NgModule({
@@ -74,6 +76,8 @@ import { ReadRoutingQueryParamsComponent } from './read-routing-query-params/rea
     ReadRoutingParamsComponent,
     Page404Component,
     ReadRoutingQueryParamsComponent,
+    Vd23DomSanitizerComponent,
+    SafeHtmlPipe,
   ],
   imports: [
     BrowserModule,
