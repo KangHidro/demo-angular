@@ -23,6 +23,7 @@ import { Vd20FormValidatorCtmVldtrComponent } from './vd20-form-validator-ctm-vl
 import { Vd21RoutingComponent } from './vd21-routing/vd21-routing.component';
 import { Vd23DomSanitizerComponent } from './vd23-dom-sanitizer/vd23-dom-sanitizer.component';
 import { Vd25InteractionComponentsComponent } from './vd25-interaction-components/vd25-interaction-components.component';
+import { Vd26HostEventListenerComponent } from './vd26-host-event-listener/vd26-host-event-listener.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'vd02', pathMatch: 'full' },
@@ -52,6 +53,7 @@ const routes: Routes = [
   },
   { path: 'vd23', component: Vd23DomSanitizerComponent },
   { path: 'vd25', component: Vd25InteractionComponentsComponent },
+  { path: 'vd26', component: Vd26HostEventListenerComponent },
 
   // { path: '**', redirectTo: 'vd02', pathMatch: 'full' },
   { path: '**', component: Page404Component },

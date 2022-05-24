@@ -44,6 +44,7 @@ import { Vd23DomSanitizerComponent } from './vd23-dom-sanitizer/vd23-dom-sanitiz
 import { SafeHtmlPipe } from './vd23-dom-sanitizer/safe-html.pipe';
 import { Vd25InteractionComponentsComponent } from './vd25-interaction-components/vd25-interaction-components.component';
 import { TrackingDataComponent } from './tracking-data/tracking-data.component';
+import { Vd26HostEventListenerComponent } from './vd26-host-event-listener/vd26-host-event-listener.component';
 
 
 @NgModule({
@@ -82,6 +83,7 @@ import { TrackingDataComponent } from './tracking-data/tracking-data.component';
     SafeHtmlPipe,
     Vd25InteractionComponentsComponent,
     TrackingDataComponent,
+    Vd26HostEventListenerComponent,
   ],
   imports: [
     BrowserModule,
