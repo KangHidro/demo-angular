@@ -22,6 +22,7 @@ import { Vd19FormArrayComponent } from './vd19-form-array/vd19-form-array.compon
 import { Vd20FormValidatorCtmVldtrComponent } from './vd20-form-validator-ctm-vldtr/vd20-form-validator-ctm-vldtr.component';
 import { Vd21RoutingComponent } from './vd21-routing/vd21-routing.component';
 import { Vd23DomSanitizerComponent } from './vd23-dom-sanitizer/vd23-dom-sanitizer.component';
+import { Vd25InteractionComponentsComponent } from './vd25-interaction-components/vd25-interaction-components.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'vd02', pathMatch: 'full' },
@@ -50,6 +51,7 @@ const routes: Routes = [
     loadChildren: () => import('./vd22-lazy-loading/vd22-lazy-loading.module').then(m => m.Vd22LazyLoadingModule)
   },
   { path: 'vd23', component: Vd23DomSanitizerComponent },
+  { path: 'vd25', component: Vd25InteractionComponentsComponent },
 
   // { path: '**', redirectTo: 'vd02', pathMatch: 'full' },
   { path: '**', component: Page404Component },

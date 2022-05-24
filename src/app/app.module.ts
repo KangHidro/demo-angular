@@ -42,6 +42,8 @@ import { Page404Component } from './page404/page404.component';
 import { ReadRoutingQueryParamsComponent } from './read-routing-query-params/read-routing-query-params.component';
 import { Vd23DomSanitizerComponent } from './vd23-dom-sanitizer/vd23-dom-sanitizer.component';
 import { SafeHtmlPipe } from './vd23-dom-sanitizer/safe-html.pipe';
+import { Vd25InteractionComponentsComponent } from './vd25-interaction-components/vd25-interaction-components.component';
+import { TrackingDataComponent } from './tracking-data/tracking-data.component';
 
 
 @NgModule({
@@ -78,6 +80,8 @@ import { SafeHtmlPipe } from './vd23-dom-sanitizer/safe-html.pipe';
     ReadRoutingQueryParamsComponent,
     Vd23DomSanitizerComponent,
     SafeHtmlPipe,
+    Vd25InteractionComponentsComponent,
+    TrackingDataComponent,
   ],
   imports: [
     BrowserModule,
