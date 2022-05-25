@@ -54,6 +54,10 @@ const routes: Routes = [
   { path: 'vd23', component: Vd23DomSanitizerComponent },
   { path: 'vd25', component: Vd25InteractionComponentsComponent },
   { path: 'vd26', component: Vd26HostEventListenerComponent },
+  {
+    path: 'vd30',
+    loadChildren: () => import('./vd30-guards/vd30-guard.module').then(m => m.Vd30GuardModule)
+  },
 
   // { path: '**', redirectTo: 'vd02', pathMatch: 'full' },
   { path: '**', component: Page404Component },
