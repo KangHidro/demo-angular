@@ -1,0 +1,29 @@
+<h3>Form can Null</h3>
+<hr>
+<form [formGroup]="form">
+  Username: <input type="text" formControlName="username" autocomplete="new-password"><br>
+  Password: <input type="password" formControlName="password" autocomplete="new-password"><br>
+  Fullname: <input type="text" formControlName="fullname"><br>
+  Age: <input type="number" formControlName="age"><br>
+</form>
+<br>
+<button type="button" (click)="resetForm()">Reset Form</button>
+<hr>
+{{ form.value | json }}
+
+<br><br><br>
+<hr>
+<br><br><br>
+
+<h3>Form Non Null</h3>
+<hr>
+<form [formGroup]="formNonNull">
+  Username: <input type="text" formControlName="username" autocomplete="new-password"><br>
+  Password: <input type="password" formControlName="password" autocomplete="new-password"><br>
+  Fullname: <input type="text" formControlName="fullname"><br>
+  Age: <input type="number" formControlName="age"><br>
+</form>
+<br>
+<button type="button" (click)="resetFormNonNull()">Reset Form</button>
+<hr>
+{{ formNonNull.value | json }}
