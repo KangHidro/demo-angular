@@ -1,0 +1,13 @@
+<h3>This is Standalone Form from Example 18</h3>
+<hr>
+<form [formGroup]="formBuild">
+  Enter your name: <input type="text" formControlName="yourName">
+</form>
+<br>
+<button type="button" (click)="patchValue()">Call patchValue</button>
+<button type="button" (click)="setValue()">Call setValue</button>
+<button type="button" (click)="resetForm()">Call resetForm</button>
+<button type="button" (click)="updateValueAndVidity()">Call updateValueAndVidity</button>
+<br><i>Call updateValueAndVidity should use when change validator of form control</i>
+<br><br>
+{{ formBuild.value | json }}

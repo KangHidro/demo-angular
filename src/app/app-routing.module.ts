@@ -58,6 +58,10 @@ const routes: Routes = [
     path: 'vd30',
     loadChildren: () => import('./vd30-guards/vd30-guard.module').then(m => m.Vd30GuardModule)
   },
+  {
+    path: 'vd31',
+    loadChildren: () => import('./vd31-standalone-comp/vd31-standalone-comp.module').then(m => m.Vd31StandaloneCompModule)
+  },
 
   // { path: '**', redirectTo: 'vd02', pathMatch: 'full' },
   { path: '**', component: Page404Component },
