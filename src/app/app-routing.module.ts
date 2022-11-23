@@ -25,6 +25,7 @@ import { Vd23DomSanitizerComponent } from './vd23-dom-sanitizer/vd23-dom-sanitiz
 import { Vd25InteractionComponentsComponent } from './vd25-interaction-components/vd25-interaction-components.component';
 import { Vd26HostEventListenerComponent } from './vd26-host-event-listener/vd26-host-event-listener.component';
 import { Vd32TypedFormComponent } from './vd32-typed-form/vd32-typed-form.component';
+import { Vd33TypedFormArrayComponent } from './vd33-typed-form-array/vd33-typed-form-array.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'vd02', pathMatch: 'full' },
@@ -64,6 +65,7 @@ const routes: Routes = [
     loadChildren: () => import('./vd31-standalone-comp/vd31-standalone-comp.module').then(m => m.Vd31StandaloneCompModule)
   },
   { path: 'vd32', component: Vd32TypedFormComponent },
+  { path: 'vd33', component: Vd33TypedFormArrayComponent },
 
   // { path: '**', redirectTo: 'vd02', pathMatch: 'full' },
   { path: '**', component: Page404Component },

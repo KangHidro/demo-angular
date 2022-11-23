@@ -46,6 +46,7 @@ import { Vd25InteractionComponentsComponent } from './vd25-interaction-component
 import { TrackingDataComponent } from './tracking-data/tracking-data.component';
 import { Vd26HostEventListenerComponent } from './vd26-host-event-listener/vd26-host-event-listener.component';
 import { Vd32TypedFormComponent } from './vd32-typed-form/vd32-typed-form.component';
+import { Vd33TypedFormArrayComponent } from './vd33-typed-form-array/vd33-typed-form-array.component';
 
 
 @NgModule({
@@ -86,6 +87,7 @@ import { Vd32TypedFormComponent } from './vd32-typed-form/vd32-typed-form.compon
     TrackingDataComponent,
     Vd26HostEventListenerComponent,
     Vd32TypedFormComponent,
+    Vd33TypedFormArrayComponent,
   ],
   imports: [
     BrowserModule,
