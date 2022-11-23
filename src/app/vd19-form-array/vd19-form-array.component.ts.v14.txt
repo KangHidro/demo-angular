@@ -1,0 +1,45 @@
+import { Component, OnInit } from '@angular/core';
+import { UntypedFormArray, UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
+
+@Component({
+  selector: 'app-vd19-form-array',
+  templateUrl: './vd19-form-array.component.html',
+  styleUrls: ['./vd19-form-array.component.scss']
+})
+export class Vd19FormArrayComponent implements OnInit {
+
+  form!: UntypedFormGroup;
+
+  constructor(private builder: UntypedFormBuilder) { }
+
+  ngOnInit(): void {
+    this.form = this.builder.group({
+      lessons: this.builder.array([])
+    });
+  }
+
+  get lessons() {
+    return this.form.controls['lessons'] as UntypedFormArray;
+  }
+
+  get lessonsControls(): UntypedFormGroup[] {
+    return this.lessons.controls as UntypedFormGroup[];
+  }
+
+  addLesson() {
+    const lessonForm = this.builder.group({
+      title: [''],
+      level: ['']
+    });
+    this.lessons.push(lessonForm);
+  }
+
+  deleteLesson(lessonIndex: number) {
+    this.lessons.removeAt(lessonIndex);
+  }
+
+  get valueOfLessions() {
+    return this.lessons.controls.map(eachGroup => eachGroup.value);
+  }
+
+}

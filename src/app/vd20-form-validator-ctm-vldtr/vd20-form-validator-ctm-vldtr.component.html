@@ -21,7 +21,7 @@ Field "email" error: {{ formBuild.get('email')?.errors | json }}<br>
 <br><br><br>
 <hr>
 <br><br><br>
-Touched & hasError example:<br>
+Touched & hasError example: (Refresh page before below test)<br>
 <form [formGroup]="formBuild">
   Enter point: <input type="number" formControlName="point"><br>
   <ng-container *ngIf="formBuild.get('point')?.touched">
