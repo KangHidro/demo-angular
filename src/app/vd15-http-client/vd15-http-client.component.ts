@@ -23,29 +23,29 @@ export class Vd15HttpClientComponent implements OnInit {
 
   getUser() {
     this.http.get<User[]>(this.apiLink)
-      .subscribe(res => this.listUser = res);
+      .subscribe({ next: res => this.listUser = res });
   }
 
   createUser(name: string, age: number) {
     this.http.post(this.apiLink, { name, age })
-      .subscribe(() => this.getUser());
+      .subscribe({ next: () => this.getUser() });
   }
 
   updateUser(id: string, name: string, age: number) {
     this.http.put(this.apiLink + `/${id}`, { name, age })
-      .subscribe(() => this.getUser());
+      .subscribe({ next: () => this.getUser() });
     this.selectedUser._id = '';
   }
 
   deleteUser(id: string) {
     this.http.delete(this.apiLink + `/${id}`)
-      .subscribe(() => this.getUser());
+      .subscribe({ next: () => this.getUser() });
   }
 
   getObserve() {
     this.http.get('https://gist.githubusercontent.com/KangHidro/e476c95a13c55a4e7b9fb4466a8e2720/raw',
       { responseType: 'text' })
-      .subscribe(res => alert(res));
+      .subscribe({ next: res => alert(res) });
   }
 
 }
