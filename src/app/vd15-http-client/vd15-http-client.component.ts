@@ -51,5 +51,5 @@ export class Vd15HttpClientComponent implements OnInit {
 }
 
 export class User {
-  constructor(public _id = '', public name = '', public age = 0) { }
+  constructor(public _id = '', public name = '', public age = 0, public colour = '') { }
 }

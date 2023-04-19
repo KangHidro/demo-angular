@@ -1,0 +1,8 @@
+Các file nào cần được test, các file nào có thể bỏ qua test (ví dụ khi chỉ cần test component/service mình đang làm)
+được thiết đặt trong file src/test.ts, sử dụng RegExp
+
+// Test tất cả các file kết thúc bằng ".spec.ts"
+const context = require.context('./', true, /\.spec\.ts$/);
+
+// Test các file bắt đầu với tên "vd34", kết thúc bằng ".spec.ts"
+const context = require.context('./', true, /vd34.*\.spec\.ts$/);

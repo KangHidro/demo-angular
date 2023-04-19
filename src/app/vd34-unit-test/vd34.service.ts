@@ -1,0 +1,48 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+
+export class Vd34Service {
+  // Access crudcrud.com for new free API (expired in 24h)
+  apiLink = 'https://crudcrud.com/api/e5fdec5df6314a3b88f16622eb3b52a2/unicorns';
+  // Then click button: "Click to create a unicorn" to test this example
+  constructor(private http: HttpClient) { }
+
+  getUser(): Observable<User[]> {
+    return this.http.get<User[]>(this.apiLink);
+  }
+  getUserById(id: string): Observable<User> {
+    return this.http.get<User>(this.apiLink + `/${id}`);
+  }
+  createUser(name: string, age: number, colour: string): Observable<User> {
+    return this.http.post<User>(this.apiLink, { name, age, colour });
+  }
+  updateUser(id: string, name: string, age: number, colour: string): Observable<User> {
+    return this.http.put<User>(this.apiLink + `/${id}`, { name, age, colour });
+  }
+  deleteUser(id: string): Observable<User> {
+    return this.http.delete<User>(this.apiLink + `/${id}`);
+  }
+}
+
+
+export class User {
+  _id: string;
+  name: string;
+  age: number;
+  colour: string;
+  constructor(
+    name = '', age = 0,
+    colour = '', _id?: string
+  ) {
+    this.name = name;
+    this.age = age;
+    this.colour = colour;
+    this._id = _id ?? '';
+  }
+}
+
