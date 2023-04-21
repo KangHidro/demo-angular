@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 
 export class Vd34Service {
   // Access crudcrud.com for new free API (expired in 24h)
-  apiLink = 'https://crudcrud.com/api/e5fdec5df6314a3b88f16622eb3b52a2/unicorns';
+  apiLink = 'https://crudcrud.com/api/4826f87301f841a98d77c47cf0589130/unicorns';
   // Then click button: "Click to create a unicorn" to test this example
   constructor(private http: HttpClient) { }
 
@@ -26,6 +26,11 @@ export class Vd34Service {
   }
   deleteUser(id: string): Observable<User> {
     return this.http.delete<User>(this.apiLink + `/${id}`);
+  }
+
+  // A demo function for testing vd34 component
+  createUser2(user: User): Observable<User> {
+    return this.http.post<User>(this.apiLink, user);
   }
 }
 

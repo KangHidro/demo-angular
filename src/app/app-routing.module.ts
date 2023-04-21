@@ -26,6 +26,7 @@ import { Vd25InteractionComponentsComponent } from './vd25-interaction-component
 import { Vd26HostEventListenerComponent } from './vd26-host-event-listener/vd26-host-event-listener.component';
 import { Vd32TypedFormComponent } from './vd32-typed-form/vd32-typed-form.component';
 import { Vd33TypedFormArrayComponent } from './vd33-typed-form-array/vd33-typed-form-array.component';
+import { Vd34UnitTestComponent } from './vd34-unit-test/vd34-unit-test.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'vd02', pathMatch: 'full' },
@@ -66,6 +67,7 @@ const routes: Routes = [
   },
   { path: 'vd32', component: Vd32TypedFormComponent },
   { path: 'vd33', component: Vd33TypedFormArrayComponent },
+  { path: 'vd34', component: Vd34UnitTestComponent },
 
   // { path: '**', redirectTo: 'vd02', pathMatch: 'full' },
   { path: '**', component: Page404Component },

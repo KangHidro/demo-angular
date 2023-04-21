@@ -1,1 +1,12 @@
-<p>vd34-unit-test works!</p>
+Sample Form:<br>
+<form [formGroup]="formBuild">
+  Enter name:
+  <input id="name" type="text" [ngClass]="isFieldError('name')" formControlName="name"><br>
+  Enter age:
+  <input id="age" type="number" [ngClass]="isFieldError('age')" formControlName="age"><br>
+  Enter color:
+  <input id="color" type="text" [ngClass]="isFieldError('color')" formControlName="color"><br>
+</form>
+<button type="button" (click)="onSubmit()">Create user</button>
+<br><br>
+<h3>{{noti}}</h3>
