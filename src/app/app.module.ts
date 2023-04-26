@@ -48,6 +48,7 @@ import { Vd26HostEventListenerComponent } from './vd26-host-event-listener/vd26-
 import { Vd32TypedFormComponent } from './vd32-typed-form/vd32-typed-form.component';
 import { Vd33TypedFormArrayComponent } from './vd33-typed-form-array/vd33-typed-form-array.component';
 import { Vd34UnitTestComponent } from './vd34-unit-test/vd34-unit-test.component';
+import { Vd35DocumentationComponent } from './vd35-documentation/vd35-documentation.component';
 
 
 @NgModule({
@@ -90,6 +91,7 @@ import { Vd34UnitTestComponent } from './vd34-unit-test/vd34-unit-test.component
     Vd32TypedFormComponent,
     Vd33TypedFormArrayComponent,
     Vd34UnitTestComponent,
+    Vd35DocumentationComponent,
   ],
   imports: [
     BrowserModule,
