@@ -1,13 +1,19 @@
-Router outlet of dashboard:<br>
+Router-outlet of dashboard (for load children):<br>
 <div style="border: solid 1px black;">
   <br>
-  <router-outlet></router-outlet><br>
+  <router-outlet></router-outlet><br><br>
 </div>
 <hr>
-<button (click)="addAuth()">Add Auth Data</button>
-<button (click)="removeAuth()">Remove Auth Data</button>
+isLoggedIn: {{ getAuth() }}<br>Role: {{ getRole() }}
+<hr>
+<button (click)="addAuth()">Login</button>
+<button (click)="removeAuth()">Logout</button>
+|
+<button (click)="addRole('admin')">Role Admin</button>
+<button (click)="addRole('user')">Role User</button>
+<button (click)="removeRole()">Remove Role</button>
 <hr>
 <button routerLink="/vd30/dashboard/child">Go to Dashboard child<br>(ActivateChild guard)</button>
 <button routerLink="/vd30/feature1">Go to Feature1<br>(Activate guard)</button>
 <button routerLink="/vd30/feature2">Go to Feature2<br>(Deactivate guard)</button>
-<button routerLink="/vd30/feature3">Go to Feature3<br>(CanLoad guard)</button>
+<button routerLink="/vd30/canmatch">Go to CanMatch feature<br>(CanMatch guard)</button>

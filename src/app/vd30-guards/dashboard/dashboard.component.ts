@@ -12,12 +12,16 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addAuth() {
-    localStorage.setItem('login', '1');
-  }
+  getAuth = () => localStorage.getItem('login');
 
-  removeAuth() {
-    localStorage.removeItem('login');
-  }
+  addAuth = () => localStorage.setItem('login', '1');
+
+  removeAuth = () => localStorage.removeItem('login');
+
+  getRole = () => localStorage.getItem('role');
+
+  addRole = (role: string) => localStorage.setItem('role', role);
+
+  removeRole = () => localStorage.removeItem('role');
 
 }

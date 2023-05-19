@@ -1,21 +1,23 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminFeatureComponent } from './admin-feature/admin-feature.component';
+import { DashboardDetailComponent } from './dashboard-detail/dashboard-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { Feature1Component } from './feature1/feature1.component';
-import { DeactivateGuard } from './guards/deactivate.guard';
-import { ActivateGuard } from './guards/activate.guard';
 import { Feature2Component } from './feature2/feature2.component';
-import { CanLoadGuard } from './guards/canload.guard';
-import { ActivateChildGuard } from './guards/activate-child.guard';
-import { DashboardDetailComponent } from './dashboard-detail/dashboard-detail.component';
+import { canActiveChildGuard } from './guards/activate-child.guard';
+import { canActiveGuard } from './guards/activate.guard';
+import { canMatchGuard } from './guards/can-match.guard';
+import { canDeactivateGuard } from './guards/deactivate.guard';
+import { UserFeatureComponent } from './user-feature/user-feature.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivateChild: [ActivateChildGuard],
+    canActivateChild: [canActiveChildGuard],
     children: [
       {
         path: 'child',
@@ -26,17 +28,28 @@ export const routes: Routes = [
   {
     path: 'feature1',
     component: Feature1Component,
-    canActivate: [ActivateGuard],
+    canActivate: [canActiveGuard],
   },
   {
     path: 'feature2',
     component: Feature2Component,
-    canDeactivate: [DeactivateGuard],
+    canDeactivate: [canDeactivateGuard],
   },
   {
-    path: 'feature3',
-    loadChildren: () => import('./feature3/feature3.module').then(m => m.Feature3Module),
-    canLoad: [CanLoadGuard]
+    path: 'canmatch',
+    component: AdminFeatureComponent,
+    canMatch: [canMatchGuard],
+    data: {
+      role: 'admin'
+    }
+  },
+  {
+    path: 'canmatch',
+    component: UserFeatureComponent,
+    canMatch: [canMatchGuard],
+    data: {
+      role: 'user'
+    }
   },
 ];
 
@@ -45,6 +58,8 @@ export const routes: Routes = [
     DashboardComponent,
     Feature1Component,
     Feature2Component,
+    AdminFeatureComponent,
+    UserFeatureComponent,
   ],
   imports: [
     CommonModule,
@@ -52,11 +67,5 @@ export const routes: Routes = [
     // Routes
     RouterModule.forChild(routes),
   ],
-  providers: [
-    ActivateGuard,
-    ActivateChildGuard,
-    DeactivateGuard,
-    CanLoadGuard,
-  ]
 })
 export class Vd30GuardModule { }

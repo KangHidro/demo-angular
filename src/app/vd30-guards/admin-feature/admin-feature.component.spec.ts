@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Feature3AComponent } from './feature3-a.component';
+import { AdminFeatureComponent } from './admin-feature.component';
 
-describe('Feature3AComponent', () => {
-  let component: Feature3AComponent;
-  let fixture: ComponentFixture<Feature3AComponent>;
+describe('AdminFeatureComponent', () => {
+  let component: AdminFeatureComponent;
+  let fixture: ComponentFixture<AdminFeatureComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Feature3AComponent ]
+      declarations: [ AdminFeatureComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(Feature3AComponent);
+    fixture = TestBed.createComponent(AdminFeatureComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
